@@ -67,6 +67,10 @@ select {
   box-sizing: border-box;
 }
 
+.submit-btn:hover {
+  background-color: navy;
+}
+
 .tile {
   margin: 0;
   font-size: 14px;

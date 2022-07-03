@@ -14,6 +14,7 @@ export const ContactForm = ({
       <input
         type="text"
         value={name}
+        placeholder="Name"
         onChange={({ target }) => {
           setName(target.value);
         }}
@@ -22,6 +23,7 @@ export const ContactForm = ({
 
       <input
         type="tel"
+        placeholder="Phone Number"
         value={phone}
         onChange={({ target }) => {
           setPhone(target.value);
@@ -31,6 +33,7 @@ export const ContactForm = ({
 
       <input
         type="email"
+        placeholder="Email"
         value={email}
         onChange={({ target }) => {
           setEmail(target.value);
@@ -38,7 +41,7 @@ export const ContactForm = ({
         required
       />
 
-      <input type="submit" />
+      <input type="submit" className="submit-btn" />
     </form>
   );
 };

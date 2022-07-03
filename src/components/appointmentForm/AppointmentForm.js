@@ -25,6 +25,7 @@ export const AppointmentForm = ({
       <input
         type="text"
         value={title}
+        placeholder="Title"
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
@@ -43,7 +44,7 @@ export const AppointmentForm = ({
         value={contact}
         onChange={({ target }) => setContact(target.value)}
       />
-      <input type="submit" />
+      <input type="submit" className="submit-btn" />
     </form>
   );
 };
