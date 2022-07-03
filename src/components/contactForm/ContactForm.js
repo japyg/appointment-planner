@@ -23,11 +23,12 @@ export const ContactForm = ({
 
       <input
         type="tel"
-        placeholder="Phone Number"
+        placeholder="Mobile Number (+63)"
         value={phone}
         onChange={({ target }) => {
           setPhone(target.value);
         }}
+        pattern="[0-9]${10}"
         required
       />
 
