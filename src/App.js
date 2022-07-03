@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
-
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
@@ -14,17 +13,11 @@ function App() {
   };
 
   const addContact = (name, phone, email) => {
-    setContacts((prev) => [
-      ...prev,
-      { name: name, phone: phone, email: email },
-    ]);
+    setContacts((prev) => [...prev, { name, phone, email }]);
   };
 
-  const addAppointment = (title, contact, date) => {
-    setAppointments((prev) => [
-      ...prev,
-      { title: title, contact: contact, date: date },
-    ]);
+  const addAppointment = (title, contact, date, time) => {
+    setAppointments((prev) => [...prev, { title, contact, date, time }]);
   };
 
   return (
@@ -43,10 +36,14 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-            <ContactsPage addContact={addContact} />
+            <ContactsPage contacts={contacts} addContact={addContact} />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            <AppointmentsPage addAppointment={addAppointment} />
+            <AppointmentsPage
+              contacts={contacts}
+              appointments={appointments}
+              addAppointment={addAppointment}
+            />
           </Route>
         </Switch>
       </main>
