@@ -21,33 +21,29 @@ export const AppointmentForm = ({
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={title}
-          type="text"
-          onChange={(e) => setTitle(e.target.value)}
-        />
-
-        <input
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          type="date"
-          min={getTodayString()}
-        />
-
-        <input
-          type="time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-        />
-        <ContactPicker
-          contacts={contacts}
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-        />
-        <input type="submit" />
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <input
+        type="date"
+        value={date}
+        onChange={({ target }) => setDate(target.value)}
+        min={getTodayString()}
+      />
+      <input
+        type="time"
+        value={time}
+        onChange={({ target }) => setTime(target.value)}
+      />
+      <ContactPicker
+        contacts={contacts}
+        value={contact}
+        onChange={({ target }) => setContact(target.value)}
+      />
+      <input type="submit" />
+    </form>
   );
 };

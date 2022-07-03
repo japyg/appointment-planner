@@ -31,7 +31,7 @@ export const AppointmentsPage = (props) => {
           title={title}
           contact={contact}
           date={date}
-          time={date}
+          time={time}
           setTitle={setTitle}
           setContact={setContact}
           setDate={setDate}

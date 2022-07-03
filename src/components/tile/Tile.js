@@ -2,6 +2,7 @@ import React from "react";
 
 export const Tile = ({ value }) => {
   const arr = Object.values(value);
+  console.log(arr);
 
   return (
     <div className="tile-container">

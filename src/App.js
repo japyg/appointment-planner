@@ -16,8 +16,8 @@ function App() {
     setContacts((prev) => [...prev, { name, phone, email }]);
   };
 
-  const addAppointment = (title, contact, date, time) => {
-    setAppointments((prev) => [...prev, { title, contact, date, time }]);
+  const addAppointment = (title, date, time, contact) => {
+    setAppointments((prev) => [...prev, { title, date, time, contact }]);
   };
 
   return (
