@@ -26,7 +26,6 @@ export const ContactForm = ({
         onChange={({ target }) => {
           setPhone(target.value);
         }}
-        // pattern="^[+][0-9]\d{2}-\d{3}-\d{4}$"
         required
       />
 

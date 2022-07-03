@@ -1,10 +1,11 @@
 import React from "react";
 
 export const Tile = ({ value }) => {
-  const obj = Object.values(value);
+  const arr = Object.values(value);
+
   return (
     <div className="tile-container">
-      {obj.map((val, index) => {
+      {arr.map((val, index) => {
         if (index === 0) {
           return (
             <p className="tile-title" key={index}>
